@@ -1,27 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Portofolio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="author" content="Ward Smeyers">
+    <meta name="description" content="Dit is de portofolio van Ward Smeyers.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css">
+    <!--my css-->
+    <link rel="stylesheet" href="main.css">
+    <!--fontawesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Kanit&family=Lobster&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-  </header>
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>This is where you can write about yourself.</p>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <p>Details about your projects will go here.</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 My Portfolio</p>
-  </footer>
-</body>
-</html></html>
+    <header class="row m-0 justify-content-start align-items-center justify-content-lg-between">
+      <img src="images/logo.svg" alt="Logo" class="p-1 m-1 col-2">
+      <h1 class="py-3 ps-4 mb-0 col-8 col-lg-4"> Ward Smeyers</h1>
+      <nav class="p-0 me-4 col-12 col-md-12 col-lg-5">
+          <ul class="p-0 m-0 row justify-content-center  align-items-center flex-xl-nowrap">
+              <li class="px-0 py-1 my-1 col-7 d-flex col-sm-3 col-xxl-2"><a class="col-12 p-2" href="shop/shop.html">Shop</a></li>
+              <li class="px-0 py-1 my-1 col-7 d-flex col-sm-3 col-xxl-2"><a class="col-12 p-2" href="gallery/gallery.html">Gallery</a></li>
+              <li class="px-0 py-1 my-1 col-7 d-flex col-sm-3"><a class="col-12 p-2" href="flexbox/flexboxdemo.html">Flexboxdemo</a></li>
+              <li class="px-0 py-1 my-1 col-7 d-flex col-sm-3 col-xxl-2"><a class="col-12 p-2" href="mystartup/mystartup.html">MyStartup</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <!-- <div id="quote" class="m-0">
+        <div class="row m-0 justify-content-end align-items-center">
+            <p class="col-11 col-md-10 col-lg-8">"<em>Speak</em> in such a way that other love to <em>listen</em> to you. <em>Listen</em> in such a way that other love to <em>speak</em> to you."</p>
+            <p class="col-11 col-md-10 col-lg-8">Anonymous... Yes really!</p>
+        </div>
+    </div> -->
+    <article class="container">
+
+        <div class="m-2 row flex-wrap justify-content-between flex-md-row-reverse">
+            <div class="box-shadow mt-5 p-0 col-12 col-md-3 d-flex flex-wrap justify-content-evenly align-items-end">
+                <div class="m- p-0 col-12 col-lg-12 my-lg-3">
+                    <figure class="mb-4 row justify-content-center">
+                        <img class="col-12" src="images/avataaars.svg" alt="My avatar">
+                        <figcaption class="mt-3 col-12">Ward Smeyers</figcaption>
+                    </figure>
+                </div>
+                <div class="mb-4 px-4 col-12 d-flex flex-wrap justify-content-evenly">
+                    <a href="https://gitlab.com/Ward-Smeyers"><span class="fa-brands fa-gitlab"></span> Gitlab</a>
+                    <a href="https://github.com/Ward-Smeyers"><span class="fa-brands fa-github"></span> GitHub</a>
+                </div>
+            </div>
+            <div class="m-2 p-0 col-12 col-md-7">
+                <h2 class="mt-3 p-1 col-12">Profiel</h2>
+                <p class="mt-3">Ik ben Ward Smeyers, een student aan Thomas More Campus Geel. Ik zit nu in mijn tweede jaar ITFactory. Voordat ik ITFactory gestart ben, heb ik mijn diploma van bachelor Elektromechanica gehaald bij Thomas More Geel. Deze portfolio is om te laten zien aan welke IT projecten ik heb tijdens mijn opleiding.</p>
+                <p>Verder ben ik nog ondervoorzitter bij de studentenraad. En zet ik me ook in voor SIN (Student Informatie Netwerk) waar deze portfolio gehost wordt.</p></div>
+        </div>
+
+        <!-- <div class="d-md-none m-2 row justify-content-center">
+            <hr>
+            <div class="m-2 p-0 col-12">
+                <figure class="row justify-content-center align-items-center">
+                    <img class="col-12" src="images/completed_task.svg" alt="Happy person" width="400">
+                </figure>
+            </div>
+        </div> -->
+
+        <div>
+            <hr class="mt-md-5">
+            <ul class="p-0 my-5 row justify-content-center align-items-stretch">
+                <li class="p-0 col-12 col-md-6 col-lg-3">
+                    <div class="box-shadow p-2 m-2 row align-items-center">
+                        <img class="col-2 col-md-4 p-0" src="images/html.svg" alt="">
+                        <p class="col-10 col-md-8 my-3 p-0"> <b>20/20</b> Oefeningen gemaakt</p>
+                    </div>
+                </li>
+                <li class="p-0 col-12 col-md-6 col-lg-3">
+                    <div class="box-shadow p-2 m-2 row align-items-center">
+                        <img class="col-2 col-md-4 p-0" src="images/css.svg" alt="">
+                        <p class="col-10 col-md-8 my-3 p-0"><b>24/28</b> Oefeningen gemaakt</p>
+                    </div>
+                </li>
+                <li class="p-0 col-12 col-md-6 col-lg-3">
+                    <div class="box-shadow p-2 m-2 row align-items-center">
+                        <img class="col-2 col-md-4 p-0" src="images/git.svg" alt="">
+                        <p class="col-10 col-md-8 my-3 p-0"><b>2</b> Jaren Ervaring</p>
+                    </div>
+                </li>
+                <li class="p-0 col-12 col-md-6 col-lg-3">
+                    <div class="box-shadow p-2 m-2 row align-items-center">
+                        <img class="col-2 col-md-4 p-0" src="images/python.svg" alt="">
+                        <p class="col-10 col-md-8 my-3 p-0"><b>10/10</b> Hoofdstukken</p>
+                    </div>
+                </li>
+                <li class="p-0 col-12 col-md-6 col-lg-3">
+                    <div class="box-shadow p-2 m-2 row align-items-center">
+                        <img class="col-2 col-md-4 p-0" src="images/windows-10.svg" alt="">
+                        <p class="col-10 col-md-8 my-3 p-0"><b>13</b> Jaar Ervaring</p>
+                    </div>
+                </li>
+                <li class="p-0 col-12 col-md-6 col-lg-3">
+                    <div class="box-shadow p-2 m-2 row align-items-center">
+                        <img class="col-2 col-md-4 p-0" src="images/linux.svg" alt="">
+                        <p class="col-10 col-md-8 my-3 p-0"><b>3</b> Jaar Ervaring</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            <hr>
+            <div class="m-2 p-0">
+                <ul class="p-0 m-0 row justify-content-start">
+                    <li class="p-2 m-0 d-flex col-12 col-md-4"><a class="m-0 p-2 col-12 py-md-3" href="https://www.pexels.com/@ward-s-734722315/"><span class="fa-solid fa-image"></span> Pexels</a>
+                    </li>
+                    <li class="p-2 m-0 d-flex col-12 col-md-4"><a class="m-0 p-2 col-12 py-md-3" href="https://github.com/Ward-Smeyers"><span class="fa-brands fa-square-github"></span> GitHub</a>
+                    </li>
+                    <li class="p-2 m-0 d-flex col-12 col-md-4"><a class="m-0 p-2 col-12 py-md-3" href="https://github.com/Ward-Smeyers"><span class="fa-solid fa-arrows-up-to-line"></span> Top</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </article>
+</body></html>
