@@ -1,0 +1,23 @@
+name: sinners ftp
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      with:
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local_path: './public_html/*'
+        server: ${{ vars.FTP_SERVER }}
+        remote_path: '/${{ vars.FTP_SERVER_DIR }}/public_html'
+        sftp_only: true
