@@ -1055,9 +1055,9 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section
+# Projecten Section
 --------------------------------------------------------------*/
-.services .service-item {
+.projecten .service-item {
   background-color: var(--surface-color);
   text-align: center;
   padding: 80px 20px;
@@ -1065,7 +1065,7 @@ section,
   height: 100%;
 }
 
-.services .service-item .icon {
+.projecten .service-item .icon {
   margin: 0 auto;
   width: 64px;
   height: 64px;
@@ -1079,13 +1079,13 @@ section,
   transform-style: preserve-3d;
 }
 
-.services .service-item .icon i {
+.projecten .service-item .icon i {
   color: var(--contrast-color);
   font-size: 28px;
   transition: ease-in-out 0.3s;
 }
 
-.services .service-item .icon::before {
+.projecten .service-item .icon::before {
   position: absolute;
   content: "";
   left: -8px;
@@ -1098,51 +1098,51 @@ section,
   transform: translateZ(-1px);
 }
 
-.services .service-item h3 {
+.projecten .service-item h3 {
   font-weight: 700;
   margin: 10px 0 15px 0;
   font-size: 22px;
 }
 
-.services .service-item p {
+.projecten .service-item p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.services .service-item:hover {
+.projecten .service-item:hover {
   background: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.services .service-item:hover .icon {
+.projecten .service-item:hover .icon {
   background: var(--surface-color);
 }
 
-.services .service-item:hover .icon i {
+.projecten .service-item:hover .icon i {
   color: var(--accent-color);
 }
 
-.services .service-item:hover .icon::before {
+.projecten .service-item:hover .icon::before {
   background: color-mix(in srgb, var(--background-color), transparent 70%);
 }
 
-.services .service-item:hover h3,
-.services .service-item:hover p {
+.projecten .service-item:hover h3,
+.projecten .service-item:hover p {
   color: var(--contrast-color);
 }
 
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
-.service-details .services-list {
+.service-details .projecten-list {
   background-color: var(--surface-color);
   padding: 10px 30px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   margin-bottom: 20px;
 }
 
-.service-details .services-list a {
+.service-details .projecten-list a {
   display: block;
   line-height: 1;
   padding: 8px 0 8px 15px;
@@ -1152,17 +1152,17 @@ section,
   transition: 0.3s;
 }
 
-.service-details .services-list a.active {
+.service-details .projecten-list a.active {
   color: var(--heading-color);
   font-weight: 700;
   border-color: var(--accent-color);
 }
 
-.service-details .services-list a:hover {
+.service-details .projecten-list a:hover {
   border-color: var(--accent-color);
 }
 
-.service-details .services-img {
+.service-details .projecten-img {
   margin-bottom: 20px;
 }
 
