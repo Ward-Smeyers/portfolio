@@ -68,7 +68,7 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>Voorraadkast</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <p class="mb-0">De voorraadkast is een project voor het vak skill2/1. Het doel van dit project was om automaties aan bootschapelijst te genereren.</p>
             </div>
           </div>
         </div>
@@ -99,27 +99,75 @@
               <a href="project-bee.html">Project Bee</a>
               <a href="sin.html">sin</a>
             </div>
-
-            <h4>Enim qui eos rerum in delectus</h4>
-            <p>Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia aut quam quod facere ut non occaecati ut aut. Nesciunt mollitia illum tempore corrupti sed eum reiciendis. Maxime modi rerum.</p>
+            <img src="../assets/img/person/person-f-12.webp" alt="temp foto" class="img-fluid projecten-img">
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="../assets/img/projecten/projecten-4.webp" alt="" class="img-fluid projecten-img">
-            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
+            <h3>De voorraadkast</h3>
             <p>
-              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              De voorraadkast is een project dat is ontworpen om huishoudbeheer te vereenvoudigen door gebruik te maken van moderne technologieën.
+              Het biedt een geïntegreerde oplossing voor het beheren van voorraad, het scannen van barcodes, en het automatisch verzenden van boodschappenlijsten via WhatsApp.
+              Dit project combineert gebruiksvriendelijke software met krachtige infrastructuur om een efficiënte en toegankelijke ervaring te bieden.
+            </p>
+
+            <h4>Verbeterde skills in dit project</h4>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>In een team werken</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Effectief communiceren binnen het team</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Mijn eigen kennis in woorden omzetten</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Projectmanagement</span></li>
+            </ul>
+
+            <h3>Infrastructuur</h3>
+            <p>
+              De omgeving van de voorraadkast bevindt zich in het datacenter van Thomas More.
+              Op de ESXi-server draait een virtuele machine waarop de benodigde containers draaien.
+              Tot slot werdt er via Cloudflare een tunnel gemaakt naar het datacenter waardoor de applicatie zonder een VPN online beschikbaar was.
+            </p>
+            <h3>Virtuele Machine</h3>
+            <p>
+              Op een Ubuntu virtuele machine zullen er verschillende containers draaien die samen een applicatie vormen waar de volgende zaken in staan:
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              <li>
+                <i class="bi bi-dash"></i><strong>WhatsApp-connector</strong>: een op maat gemaakte Python-applicatie
+                <!-- <span class="d-none d-sm-block">: Voor het automatisch verzenden van boodschappenlijsten naar WhatsApp met behulp van het platform Twilio.</span> -->
+              </li>
+              <li>
+                <i class="bi bi-dash"></i> <a href="https://grocy.info/" target="_blank"><strong>Grocy</strong></a>
+                <!-- <span class="d-none d-sm-block">: Een open-source webapplicatie voor huishoudbeheer.</span> -->
+              </li>
+              <li>
+                <i class="bi bi-dash"></i><a href="https://github.com/Forceu/barcodebuddy" target="_blank"><strong>Barcode Buddy</strong></a>
+                <!-- <span class="d-none d-sm-block">: Een uitbreiding voor Grocy die het scannen van barcodes makkelijker maakt.</span> -->
+              </li>
+              <li>
+                <i class="bi bi-dash"></i><a href="https://github.com/cloudflare/cloudflared"><strong>Cloudflared</strong></a>
+                <!-- <span class="d-none d-sm-block">: Voor het beheren van een veilige tunnel en DNS-verkeer.</span> -->
+              </li>
             </ul>
+            <h3>Whatsappconnector</h3>
             <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              De klant/docent stelde als vereiste dat de boodschappenlijst automatisch moest worden verzonden, bij voorkeur via WhatsApp.
+              Twilio is een cloud communicatieplatform waarmee ontwikkelaars eenvoudig SMS, spraakoproepen,
+              WhatsApp-berichten en videochats kunnen integreren in hun applicaties via API’s.
             </p>
             <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              De WhatsApp-connector is een door ons team ontwikkelde Python-applicatie die draait in een container op de virtuele machine en communiceert met de Twilio API.
+              Zo kan de applicatie boodschappenlijsten automatisch verzenden naar de opgegeven WhatsApp-nummers.
+              Deze WhatsApp-berichten kunnen naar één of meerdere nummers worden verzonden en op instelbare tijdstippen worden gepland met Python Schedule.
+            </p>
+            <h3>Python Schedule</h3>
+            <p>
+              Python Schedule is een python lib en diend voor het periodiek uitvoeren van taken.
+              De boodschappenlijst moet op een vast tijdstip worden verstuurd naar de ingestelde WhatsApp-nummers.
+            </p>
+            <h3>Cloudflare</h3>
+            <p>
+              Cloudflare fungeert als een reverse proxy, die het verkeer tunneled naar de applicatie Grocy en Barcode Buddy in het datacenter.
+              Dit houdt in dat Cloudflare als een tussenstation werkt tussen de eindgebruiker en de daadwerkelijke server (de containers op de virtuele machine).
+              Bijkomend beschermt het de applicatie door verkeer via hun netwerk te leiden, waarbij caching, DDoS-bescherming en andere optimalisaties worden toegepast.
+              Hiervoor draait een aparte container op de virtuele machine die Cloudflared draait.
             </p>
           </div>
 
