@@ -68,7 +68,7 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>Voorraadkast</h1>
-              <p class="mb-0">De voorraadkast is een project voor het vak skill2/1. Het doel van dit project was om automaties aan bootschapelijst te genereren.</p>
+              <p class="mb-0">De voorraadkast is een project voor het vak Skill 2/1. Het doel van dit project was om automatisch aan boodschappenlijst te genereren.</p>
             </div>
           </div>
         </div>
@@ -95,23 +95,12 @@
             <div class="projecten-list">
               <a href="thomasminder.html">Thomasminder</a>
               <a href="voorraadkast.html" class="active">Voorraadkast</a>
-              <a href="sin.html">sin</a>
+              <a href="sin.html">SIN</a>
               <a href="transport-band.html">Transportband</a>
               <a href="project-bee.html">Project Bee</a>
             </div>
 
-            <img src="../assets/img/person/person-f-12.webp" alt="temp foto" class="img-fluid projecten-img">
-          </div>
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <h3>De voorraadkast</h3>
-            <p>
-              De voorraadkast is een project dat is ontworpen om huishoudbeheer te vereenvoudigen door gebruik te maken van moderne technologieën.
-              Het biedt een geïntegreerde oplossing voor het beheren van voorraad, het scannen van barcodes, en het automatisch verzenden van boodschappenlijsten via WhatsApp.
-              Dit project combineert gebruiksvriendelijke software met krachtige infrastructuur om een efficiënte en toegankelijke ervaring te bieden.
-            </p>
-
-            <h4>Vaardigheden ontwikkeld tijdens dit project:</h4>
+            <h4>Verbeterde skills:</h4>
             <ul>
               <li><i class="bi bi-check-circle"></i> <span>In een team werken</span></li>
               <li><i class="bi bi-check-circle"></i> <span>Effectief communiceren binnen het team</span></li>
@@ -119,15 +108,27 @@
               <li><i class="bi bi-check-circle"></i> <span>Project planning</span></li>
             </ul>
 
+            <!-- <img src="../assets/img/person/person-f-12.webp" alt="temp foto" class="img-fluid projecten-img"> -->
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <h3>De voorraadkast</h3>
+            <p>
+              De voorraadkast is een project dat is ontworpen om huishoudbeheer te vereenvoudigen door gebruik te maken van moderne technologieën.
+              Het biedt een geïntegreerde oplossing voor het beheren van voorraad, het scannen van barcodes en het automatisch verzenden van boodschappenlijsten via WhatsApp.
+              Dit project combineert gebruiksvriendelijke software met krachtige infrastructuur om een efficiënte en toegankelijke ervaring te bieden aan de gebruikers van de voorraadkast.
+            </p>
+
+
             <h3>Infrastructuur</h3>
             <p>
               De omgeving van de voorraadkast bevindt zich in het datacenter van Thomas More.
               Op de ESXi-server draait een virtuele machine waarop de benodigde containers draaien.
-              Tot slot werdt er via Cloudflare een tunnel gemaakt naar het datacenter waardoor de applicatie zonder een VPN online beschikbaar was.
+              Tot slot werd er via Cloudflare een tunnel gemaakt naar het datacenter.
             </p>
             <h3>Virtuele Machine</h3>
             <p>
-              Op een Ubuntu virtuele machine zullen er verschillende containers draaien die samen een applicatie vormen waar de volgende zaken in staan:
+              Op een Ubuntu virtuele machine draaiden er verschillende containers die samen een applicatie vormden waar de volgende zaken in stonden:
             </p>
             <ul>
               <li>
@@ -150,25 +151,27 @@
             <h3>Whatsappconnector</h3>
             <p>
               De klant/docent stelde als vereiste dat de boodschappenlijst automatisch moest worden verzonden, bij voorkeur via WhatsApp.
+              Hiervoor hadden we gekozen voor het platform <a href="https://www.twilio.com/" target="_blank">Twilio</a>.
               Twilio is een cloud communicatieplatform waarmee ontwikkelaars eenvoudig SMS, spraakoproepen,
               WhatsApp-berichten en videochats kunnen integreren in hun applicaties via API’s.
             </p>
             <p>
-              De WhatsApp-connector is een door ons team ontwikkelde Python-applicatie die draait in een container op de virtuele machine en communiceert met de Twilio API.
-              Zo kan de applicatie boodschappenlijsten automatisch verzenden naar de opgegeven WhatsApp-nummers.
-              Deze WhatsApp-berichten kunnen naar één of meerdere nummers worden verzonden en op instelbare tijdstippen worden gepland met Python Schedule.
+              De WhatsApp-connector is een door ons team ontwikkelde Python-applicatie die draaide in een container op de virtuele machine en communiceerde met de Twilio API.
+              Zo kon de applicatie boodschappenlijsten automatisch verzenden naar de opgegeven WhatsApp-nummers.
+              Deze WhatsApp-berichten konden naar één of meerdere nummers worden verzonden en op instelbare tijdstippen worden gepland met Python Schedule.
             </p>
-            <h3>Python Schedule</h3>
+            <!-- <h3>Python Schedule</h3> -->
             <p>
-              Python Schedule is een python lib en diend voor het periodiek uitvoeren van taken.
+              Python Schedule is een python-library en dient voor het periodiek uitvoeren van taken.
               De boodschappenlijst moet op een vast tijdstip worden verstuurd naar de ingestelde WhatsApp-nummers.
             </p>
-            <h3>Cloudflare</h3>
+
+            <h3>Bereikbaar vanuit het internet</h3>
             <p>
-              Cloudflare fungeert als een reverse proxy, die het verkeer tunneled naar de applicatie Grocy en Barcode Buddy in het datacenter.
-              Dit houdt in dat Cloudflare als een tussenstation werkt tussen de eindgebruiker en de daadwerkelijke server (de containers op de virtuele machine).
-              Bijkomend beschermt het de applicatie door verkeer via hun netwerk te leiden, waarbij caching, DDoS-bescherming en andere optimalisaties worden toegepast.
-              Hiervoor draait een aparte container op de virtuele machine die Cloudflared draait.
+              Cloudflare werd gebruikt als een reverse proxy die het verkeer doorstuurde naar de applicaties Grocy en Barcode Buddy in het datacenter.
+              Dit hield in dat Cloudflare als een tussenstation werkte tussen de eindgebruiker en de daadwerkelijke server (de containers op de virtuele machine).
+              Bijkomend beschermde het de applicatie door verkeer via hun netwerk te leiden, waarbij caching en DDoS-bescherming werden toegepast.
+              Hiervoor gebruikten we een aparte container op de virtuele machine die Cloudflared draaide.
             </p>
           </div>
 
