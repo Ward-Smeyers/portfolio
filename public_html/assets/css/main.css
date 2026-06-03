@@ -181,7 +181,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navmenu {
     padding: 0;
   }
@@ -313,7 +313,7 @@ h6 {
 }
 
 /* Mobile Navigation */
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
