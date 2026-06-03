@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - Portfolio Bootstrap Template</title>
+  <title>AutoKube</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -68,8 +68,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Service Details</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <h1>Automatische Kubernetes-cluster</h1>
+              <p class="mb-0">Een zelfgemaakte manier om Kubernetes-clusters te deployen met Ansible en Terraform.</p>
             </div>
           </div>
         </div>
@@ -95,36 +95,79 @@
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="projecten-list d-none d-lg-block">
               <a href="soar-onderzoek.html">Soar Onderzoek</a>
-              <a href="autokube.html">AutoKube</a>
-              <a href="thomasminder.html" class="active">Thomasminder</a>
+              <a href="autokube.html" class="active">AutoKube</a>
+              <a href="thomasminder.html">Thomasminder</a>
               <a href="voorraadkast.html">Voorraadkast</a>
               <a href="sin.html">SIN</a>
               <a href="transport-band.html">Transportband</a>
               <a href="project-bee.html">Project Bee</a>
             </div>
 
-            <h4>Enim qui eos rerum in delectus</h4>
-            <p>Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia aut quam quod facere ut non occaecati ut aut. Nesciunt mollitia illum tempore corrupti sed eum reiciendis. Maxime modi rerum.</p>
+            <h4>Verbeterde skills:</h4>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Kubernetes (kubeadm, kubectl, Cilium, Flux)</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Terraform</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Ansible</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Git &amp; GitOps</span></li>
+            </ul>
+
+            <img src="../assets/img/projecten/switch.jpg" alt="temp foto" class="img-fluid projecten-img rounded-5 d-none d-lg-block">
+
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="../assets/img/projecten/projecten-4.webp" alt="" class="img-fluid projecten-img">
-            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
+            <h3>AutoKube</h3>
             <p>
-              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              Dit project is ontstaan uit drie verschillende delen.
+              Mijn interesse in automatisering en mijn interesse in Kubernetes voor thuis,
+              het Thomasminder-project van het vak Skill2 en
+              de afstudeerrichting CAD (Cloud Automation &amp; Defense) waar we de opdracht kregen om een cluster op te zetten,
+              hebben me ertoe aangezet om dit project verder uit te werken.
             </p>
+            <p>
+              Dit project zat al in mijn hoofd toen we voor het vak Skill2 de opdracht kregen om een webhostingplatform te maken.
+              Ik had toen mijn groep kunnen overtuigen om dit met een Kubernetes-cluster te doen.
+              Een van de doelen van deze opdracht was om het platform zo automatisch en zelfhelend te maken als mogelijk.
+              Daarom is hier de start van AutoKube ontstaan. Helaas lukte het ons niet om dit volledig te automatiseren, maar het was een goede start.
+            </p>
+            <p>
+              Het deel om de automatische VM's te maken met Terraform was toen wel gelukt en gebruikt in het project.
+              Maar dit deel was al goed bekend bij de studenten die via hun graduatesopleiding al ervaring hadden met Terraform.
+              Het opzetten van Kubernetes met kubeadm en Ansible was nog niet zo goed bekend bij onze groep, maar we hadden wel al een goede basis gezien bij het vak <b>Linux Webservices</b>.
+              We bereikten het punt dat we een cluster konden opzetten, maar het toevoegen van meerdere nodes lukte niet.
+              We kregen telkens een time-outfout bij het toevoegen van de extra nodes.
+            </p>
+            <p>
+              Na het project heb ik zelf geprobeerd om dit thuis werkend te krijgen.
+              Ik had voldoende tijd om hierop te focussen en vond bij het testen een manier om dit werkend te krijgen in mijn homelab.
+              Het probleem leek te liggen aan het feit dat het certificaat dat kubeadm voor de API-server aanmaakt geen juiste IP-adressen in het SAN-veld bevatte,
+              waardoor de nodes geen verbinding wilden maken met de API-server. Nadat ik dit probleem had opgelost,
+              heb ik de organisatie van de Ansible-playbooks aangepast zodat deze beter gestructureerd en makkelijker te onderhouden zijn.
+            </p>
+            <p>
+              Na het werkend krijgen van een cluster met 5 nodes, 3 masters en 2 workers, heb ik ervoor gezorgd dat Flux wordt geïnstalleerd op het cluster, zodat ik mijn cluster kan beheren via GitOps.
+              Zo heb ik al een aantal standaarddeployments geïnstalleerd, zoals Cilium met de nieuwe Gateway API en de NFS-CSI-driver voor het automatisch aanmaken van PersistentVolumes op mijn NAS.
+            </p>
+            <p>
+              Dit project is een van de redenen waarom ik heb gekozen voor de afstudeerrichting Cloud Automation &amp; Defense,
+              omdat ik hier mijn interesse in automatisering en Kubernetes verder heb kunnen ontwikkelen.
+              Ik heb tijdens dit vak dan ook gebruik kunnen maken van dit project, en heb hierop verder kunnen bouwen.
+              Dit heeft me dan ook in staat gesteld om nog verder verbeteringen aan te brengen die ik had geleerd tijdens de lessen,
+              zoals het gebruik van Flux voor GitOps en het verbeteren van de structuur van mijn Ansible-playbooks.
+            </p>
+            <p>
+              Hieronder is de repository te vinden van dit project dat momenteel in mijn homelab draait. De eerste link is het deel van de infrastructuur met Terraform en Ansible,
+              en de tweede link is de repository van mijn homelab-configuratie met Flux.
+            </p>
+
+            <h4>Links</h4>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              <li><i class="bi bi-link-45deg"></i> <a href="https://gitlab.com/homelabws/infrastructure" target="_blank">Gitlab Repository Infrastructure</a></li>
+              <li><i class="bi bi-link-45deg"></i> <a href="https://gitlab.com/homelabws/homelab" target="_blank">Gitlab Repository Homelab</a></li>
             </ul>
-            <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
-            </p>
-            <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
-            </p>
           </div>
+
+            <img src="../assets/img/projecten/switch.jpg" alt="temp foto" class="img-fluid projecten-img rounded-5 d-lg-none">
 
         </div>
 
